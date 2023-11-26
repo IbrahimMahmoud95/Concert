@@ -1,0 +1,219 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Noah';
+    src: url(../webfonts/YonderBreaksDemoRegular.ttf);
+}
+@font-face {
+    font-family: 'Overcame';
+    src: url(../webfonts/OvercameDemoBold.ttf);
+}
+:root{
+    --MainFontFamily:'Noah';
+    --SeconderyFontFamily:'Overcame';
+    --MainPageColor:#3E001F;
+    --SeconderyPageColor:#FFE5AD;
+    --MainTextColor:#982176;
+    --Exception:#58868C;
+    --SeconderyTextColor:#F11A7B;
+}
+body{
+    overflow: hidden;
+}
+::selection{
+    background-color: var(--MainPageColor);
+    color: var(--Exception);
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--SeconderyPageColor);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--MainPageColor);
+    border-radius: 5px;
+}
+/* Loading Page */
+.LoadingPage{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--MainPageColor);
+}
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: var(--Exception) transparent var(--Exception) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Side Bar */
+aside{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -188.562px;
+    z-index: 9;
+}
+.Links,.Icon{
+    background-color: var(--MainPageColor);
+}
+#Menu,#Close{
+    color: var(--SeconderyPageColor);
+    cursor: pointer;
+}
+#Menu{
+    color: var(--Exception);
+}
+.Links a{
+    text-decoration: none;
+    color: var(--SeconderyPageColor);
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+.Links a,#Menu,#Close{
+    transition:  0.5s ease-in-out;
+}
+.Links a:hover,.Icon:hover #Close,#Menu:hover{
+    color: var(--SeconderyTextColor);
+}
+/* Home */
+.Main{
+    color: var(--MainPageColor);
+}
+.Secondery{
+    color: var(--SeconderyPageColor);
+}
+.MainText{
+    font-family: var(--MainFontFamily);
+}
+.SeconderyText{
+    font-family: var(--SeconderyFontFamily);
+}
+#Home{
+    height: 100vh;
+    background-image:linear-gradient(rgba(152,33,118,0.5),rgba(241,26,123,0.5)) ,url(../imgs/Banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    font-family: 'Noah';
+}
+#Home h1{
+    font-size: 3.5rem;
+}
+.ArrowUpCarier{
+    right: 1%;
+    bottom: 1%;
+    display: none;
+    z-index: 99;
+}
+#Home .IconBackGround{
+    background-color: var(--Exception);
+}
+#ArrowUp{
+    color: var(--MainPageColor);
+}
+/* Details */
+#Details{
+    background-color: var(--SeconderyPageColor);
+}
+.DJName{
+    background-color: var(--MainPageColor);
+    cursor: pointer;
+}
+.card{
+    background-color: var(--Exception);
+    display:none ;
+}
+.DjLogo{
+    width: 50px;
+    height: 50px;
+}
+.skitter{
+    background-color: transparent;
+}
+/* Duration */
+#Duration{
+    background-color: var(--MainPageColor);
+}
+#Duration h2{
+    color: var(--SeconderyPageColor);
+}
+.Days{
+    border: 5px solid var(--SeconderyTextColor);
+    width: fit-content;
+}
+#Days,#Hours,#Minutes,#Seconds{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Contact */
+#Contact{
+    background-color: var(--SeconderyPageColor);
+}
+.Normal{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#Icon{
+    color: var(--MainPageColor);
+}
+.IconBackGround{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--Exception);
+    transition: 0.3s ease-in-out;
+}
+#SocialMediaIcon{
+    color: var(--SeconderyPageColor);
+}
+.IconBackGround:hover{
+    background-color: var(--MainPageColor);
+}
+.btn-primary{
+    color: var(--SeconderyPageColor);
+    background-color: var(--Exception);
+    border-color: var(--Exception);
+}
+.btn-primary:hover{
+    background: var(--MainPageColor);
+    border-color: var(--MainPageColor);
+    color:var(--SeconderyPageColor);
+}
+#Character{
+    color: var(--Exception);
+}
+/* Footer */
+footer{
+    background-color: var(--Exception);
+}
+.TextCarier{
+    height: fit-content;
+}
+.AviciiPic{
+    height: 200px;
+    width: 200px;
+}
